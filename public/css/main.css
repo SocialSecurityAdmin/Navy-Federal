@@ -20,7 +20,6 @@ body{
     justify-content:space-between;
 }
 #logo{
-    margin-top:5px;
     color:#fff;
     display:flex;
     align-items: center;
@@ -63,9 +62,6 @@ button{
     border-radius:5px;
     cursor:pointer;
     box-sizing: border-box;
-}
-#help{
-    font-size:5px;
 }
 #help a{
     color:#9ab6d6;
