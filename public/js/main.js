@@ -8,7 +8,7 @@ if(hour >= 5 && hour < 12){
     greeting = 'Evening!'
 }
 const greetings = document.querySelector('.greetings')
-greetings.innerHTML = `<h1>Good ${greeting}</h1>`
+greetings.innerHTML = `<h2>Good ${greeting}</h2>`
 
 
 const userName = document.querySelector('#username')

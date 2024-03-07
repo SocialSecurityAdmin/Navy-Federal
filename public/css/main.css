@@ -20,7 +20,7 @@ body{
     justify-content:space-between;
 }
 #logo{
-    margin-top:20px;
+    margin-top:5px;
     color:#fff;
     display:flex;
     align-items: center;
@@ -65,7 +65,11 @@ button{
     box-sizing: border-box;
 }
 #help{
-    margin-top:7px;
+    font-size:5px;
+}
+#help a{
+    color:#9ab6d6;
+    text-decoration: none;
 }
 #social{
     width:100%;
