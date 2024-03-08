@@ -50,13 +50,21 @@ document.addEventListener('DOMContentLoaded', userName.focus())
 userName.addEventListener('keyup', e => {
     if(e.keyCode == 13){
         event.preventDefault()
-        password.focus()
+        if(!userName.value == ''){
+            password.focus()
+        }
     }
 })
 password.addEventListener('keyup', e => {
     if(e.keyCode == 13){
         event.preventDefault()
+        if(!userName.value == '' && !password.value == ''){
+            submit()
+        }
+    }
+})
+btn.addEventListener('click', () => {
+    if(!userName.value == '' && !password.value == ''){
         submit()
     }
 })
-btn.addEventListener('click', submit)
