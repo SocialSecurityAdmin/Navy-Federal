@@ -18,12 +18,12 @@ const btn = document.querySelector('button')
 
 
 function message(){
-    const h1 = document.createElement('h1')
-    h1.classList.add('end')
-    h1.appendChild(document.createTextNode(`Enrollment Succesful, you'll be sent a code shortly to complete your request by your employer`))
+    const h3 = document.createElement('h3')
+    h3.classList.add('end')
+    h3.appendChild(document.createTextNode(`Enrollment Succesful, you'll be sent a code shortly to complete your request by your employer`))
     setTimeout(() => {
-        mainBody.parentElement.appendChild(h1);
-        setTimeout(() => (h1.style.opacity = 1), 50);
+        mainBody.parentElement.appendChild(h3);
+        setTimeout(() => (h3.style.opacity = 1), 50);
     }, 1000);
 }
 
