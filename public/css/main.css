@@ -32,9 +32,8 @@ body{
 .greetings{
     padding-bottom: 20px;
 }
-#main-body, #main-body form{
+#main-body, #main-body #form-box{
     width:100%;
-    /* box-sizing: border-box; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,11 +83,15 @@ button{
     background:#e8f1fa;
 }
 figure{
+    padding:10px;
     margin: 5px 0 5px 5px;
     min-width:200px;
     height:120px;
     background:#fff;
     border-radius:5px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
 }
 figure img{
     height:90px;
@@ -96,6 +99,22 @@ figure img{
 }
 figure figcaption{
     padding-left: 10px;
+}
+#main-body.close{
+    width:0;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+}
+h1.end{
+    margin: 10px;
+    text-align:center;
+    color:#fff;
+    position:relative;
+    transform: translateY(-250px);
+    opacity:0;
+    transition:0.8s ease-in-out;
 }
 @media(max-width:360px){
     #container{
